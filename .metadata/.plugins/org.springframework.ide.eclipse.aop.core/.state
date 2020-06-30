@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="FactoryClassUsingFactoryBean"/>
+<aop-project name="ResourceAnnotation"/>
+<aop-project name="StereoType_Annotations"/>
+<aop-project name="Array_Inject"/>
+<aop-project name="StaticVariable-Dependency"/>
+<aop-project name="RequiredAnnotation"/>
+<aop-project name="Autowiring-XMLApproach"/>
+<aop-project name="FactoryClassUsingStaticMethod"/>
+<aop-project name="Hello"/>
+<aop-project name="SpringLifeCycle-Declarative(XML)Approcah"/>
+<aop-project name="collectionInject"/>
+<aop-project name="test"/>
+<aop-project name="Autowiring-Annotation"/>
+<aop-project name="SpringLifeCycle-AnnotationApprocah"/>
+<aop-project name="InjectAnnotation"/>
+<aop-project name="SetterDIMandatory"/>
+<aop-project name="MethodReplacer"/>
+<aop-project name="spring-lc"/>
+<aop-project name="PropertiesFile_DI"/>
+<aop-project name="SpringLifeCycle-ProgrammaticApprocah"/>
+<aop-project name="Singleton-Dependency"/>
+<aop-project name="FactoryClassUsingInstanceMethod"/>
+<aop-project name="J2EE_Named_Annotations"/>
+<aop-project name="LookUpDependencyInjection"/>
+<aop-project name="PropertiesInjection"/>
+<aop-project name="DependsOn"/>
+</aop-reference-model>

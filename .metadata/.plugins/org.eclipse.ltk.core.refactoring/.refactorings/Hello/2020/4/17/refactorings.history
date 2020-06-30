@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;applicationContext.xml&apos; to &apos;test/src/main/java/resources&apos;&#x0D;&#x0A;- Original project: &apos;Hello&apos;&#x0D;&#x0A;- Destination element: &apos;test/src/main/java/resources&apos;&#x0D;&#x0A;- Original element: &apos;applicationContext.xml&apos;" description="Copy file" destination="=test/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;resources" element1="src/main/java/resources/applicationContext.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1587287649560" units="0" version="1.0"/>
+</session>

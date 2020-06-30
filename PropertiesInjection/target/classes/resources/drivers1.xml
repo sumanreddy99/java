@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean	class="com.ioc.di.collectionInject.pojo.DriverTest"
+		id="t">
+		<property name="driverclasses">
+		<props>
+		<prop key="driverclass">oracle.jdbc.driver
+		</prop>
+		<prop key="url">localhost
+		</prop>
+		<prop key="username">system
+		</prop>
+		<prop key="password">test
+		</prop>
+		</props>
+		
+		</property>
+	</bean>
+
+</beans>

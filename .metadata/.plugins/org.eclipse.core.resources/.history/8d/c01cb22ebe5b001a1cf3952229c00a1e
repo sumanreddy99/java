@@ -1,0 +1,14 @@
+package com.java;
+
+public class Car {
+
+	public Car(String type) {
+		// TODO Auto-generated constructor stub
+
+	Engine engine=new Engine();
+	engine.seteType(type);
+	
+	
+	}
+	
+}

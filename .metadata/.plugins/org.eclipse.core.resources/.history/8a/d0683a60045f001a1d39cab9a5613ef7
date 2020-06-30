@@ -1,0 +1,22 @@
+package com.java;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashCodeMethodTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Map<EmployeeType, Department> map=new HashMap<>();
+		
+		map.put(new EmployeeType(1001, "suman", "suman@hmail.com"), new Department(1, "suman", "tn"));
+		map.put(new EmployeeType(1002, "srujan", "srujan@hmail.com"), new Department(2, "srujan", "wgl"));
+		map.put(new EmployeeType(1003, "pavani", "pavani@hmail.com"), new Department(3, "pavani", "chennai"));
+		map.put(new EmployeeType(1001, "suman", "suman@hmail.com"), new Department(4, "suman", "tn"));
+		
+		
+		map.forEach((k,v)-> System.out.println(k+"/t"+v));
+	}
+
+}

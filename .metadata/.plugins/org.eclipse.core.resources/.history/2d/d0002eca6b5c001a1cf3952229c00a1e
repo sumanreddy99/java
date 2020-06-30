@@ -1,0 +1,16 @@
+package com.java;
+
+public class A {
+	
+	
+	
+	
+	public void greeting() {
+		
+		System.out.println("instance from method from A class");
+	}
+
+	static void print() {
+		System.out.println("static method from A class");
+	}
+}

@@ -1,0 +1,25 @@
+package com.java;
+
+import java.util.*;
+
+
+public class AddelementToCollection {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		List<Integer> al=new ArrayList<Integer>();
+		al.add(50);
+		al.add(20);
+		al.add(100);
+		al.add(30);
+		al.add(40);
+		
+		System.out.println("Before adding the element to list"+al);
+		
+		
+		System.out.println("Before adding the element to list"+al);
+
+	}
+
+}

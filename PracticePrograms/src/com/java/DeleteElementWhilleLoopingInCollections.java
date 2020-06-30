@@ -1,0 +1,45 @@
+package com.java;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class DeleteElementWhilleLoopingInCollections {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArrayList<Integer> al=new ArrayList<Integer>();
+		al.add(10);
+		al.add(30);
+		al.add(40);
+		al.add(50);
+		System.out.println("Before modifying the colection");
+		System.out.print(al);
+        deleteElement(al);
+        System.out.println("after modifying the colection"+al);
+		
+	}
+
+	private static void deleteElement(ArrayList<Integer> al) {
+		// TODO Auto-generated method stub
+		/*
+		 * for(Integer i:al) { if(i<40) { al.remove(i); // it will throw
+		 * ConcurrentModificationException } }
+		 */
+		//solve the ConcurrentModificationException
+		/*
+		 * for(Iterator<Integer> i=al.iterator();i.hasNext();) {
+		 * 
+		 * int n=i.next(); if(n<40) { i.remove();// will not throw
+		 * ConcurrentModificationException
+		 * 
+		 * } }
+		 */
+		
+		
+		// java 1.8
+		
+		al.removeIf(i->(i<40));
+	}
+
+}

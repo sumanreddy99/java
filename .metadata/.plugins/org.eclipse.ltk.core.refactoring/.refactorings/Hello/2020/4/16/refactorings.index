@@ -1,0 +1,22 @@
+1587199269922	Rename type 'App'
+1587199279869	Rename type 'AppTest'
+1587200280749	Move file
+1587200303694	Move package
+1587200363979	Move 'resource' to 'src'
+1587201440126	Move 'spring.xml' to 'Hello'
+1587202281281	Move 'spring.xml' to 'resource'
+1587202560648	Move 'spring.xml' to 'Hello'
+1587202615909	Delete element
+1587202988566	Move 'spring.xml' to 'resource'
+1587203000798	Move 'resource' to 'Hello'
+1587203657058	Copy folder
+1587204348490	Delete element
+1587204497229	Move 'resources' to 'src'
+1587205080611	Rename package 'com.hellowolrd.Hello'
+1587205362184	Copy file
+1587205371979	Delete element
+1587205499145	Rename package 'com.helloworld.Hello'
+1587205576822	Copy package
+1587205586149	Delete element
+1587205607136	Copy folder
+1587205617066	Delete element

@@ -1,0 +1,32 @@
+package com.java;
+
+
+class A{
+	void add() {
+		System.out.println("class A add method");
+	}
+}
+
+class B extends A{
+	void add() {
+		System.out.println("class B add method");
+	}
+}
+
+class c extends B{
+	void add() {
+		System.out.println(" class C add method");
+	}
+}
+
+public class TrickyInheritenceQuestion {
+	
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

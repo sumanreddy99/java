@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<bean	class="com.ioc.di.collectionInject.pojo.CarTest2"		id="t">
+		<property name="carNames">
+		
+		<util:list list-class="java.util.Vector">
+		
+		<value>audi</value>
+		<value>benz</value>
+		<value>bmw</value>
+		
+		
+		 </util:list>
+		 </property>
+		
+		<property name="modalYear">
+			<util:set set-class  ="java.util.TreeSet">
+				<value>2013</value>
+				<value>2014</value>
+				<value>2015</value>
+			</util:set>
+		</property>
+		
+		<property name="brandVersion">
+		
+		<util:map map-class="java.util.Hashtable">
+		
+		<entry key="audi" value="A234"/>
+		<entry key="benz" value="B123"/>
+		<entry key="bmw" value="C123"/>
+		</util:map>
+		
+		
+		</property>
+		
+	</bean>
+
+</beans>

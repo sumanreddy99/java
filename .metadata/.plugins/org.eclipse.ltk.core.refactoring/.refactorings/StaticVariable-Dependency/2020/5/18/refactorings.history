@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.ioc.di.staticvariable.bean&apos; to &apos;LookUpDependencyInjection/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;StaticVariable-Dependency&apos;&#x0D;&#x0A;- Destination element: &apos;LookUpDependencyInjection/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;StaticVariable-Dependency/src/main/java/com.ioc.di.staticvariable.bean&apos;" description="Copy package" destination="=LookUpDependencyInjection/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ioc.di.staticvariable.bean" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1588418387329" version="1.0"/>
+</session>

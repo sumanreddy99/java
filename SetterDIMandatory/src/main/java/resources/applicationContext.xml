@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+ 		
+		<beans>
+		
+	 	<bean class="com.ioc.di.SetterDI.pojo.Engine" id="e" >
+    <property name="modalYear" value="2013"></property>
+     	</bean>
+			
+		
+	 <!-- for  dependency-check="none" no property setter method required -->	 		
+	<!-- 	<bean class="com.ioc.di.SetterDI.pojo.Car" id="c1" dependency-check="none">
+    
+     	</bean>
+	 -->
+	 
+	 <!-- dependency-check="simple" primitive type data type setter method required-->	
+		<!-- <bean class="com.ioc.di.SetterDI.pojo.Car" id="c1" dependency-check="simple">
+		
+         <property name="carNames" value="audi"/>
+         		
+		</bean>
+         -->
+        
+     <!-- dependency-check="object" secondary type data type setter method required-->	
+		<!-- <bean class="com.ioc.di.SetterDI.pojo.Car" id="c1" dependency-check="objects">
+		
+         <property name="engine" ref="e"/>
+         		
+		</bean>
+       	 -->	
+    <!-- dependency-check="object" secondary type data type setter method required-->	
+		<bean class="com.ioc.di.SetterDI.pojo.Car" id="c1" dependency-check="all">
+		
+		<property name="carNames" value="audi"/>
+         <property name="engine" ref="e"/>
+         		
+		</bean>
+        
+		
+		</beans>

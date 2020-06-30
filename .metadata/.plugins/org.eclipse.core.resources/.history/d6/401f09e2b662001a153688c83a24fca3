@@ -1,0 +1,58 @@
+package com.java;
+
+import javax.swing.plaf.synth.SynthSpinnerUI;
+
+public class DeadLockDetect_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		final String resource1="java";
+		final String resource2="tutorial";
+		
+		// Thread t1 tries to lock the resource1 then resource2 
+		Thread t1=new Thread("thread_1") {
+			@Override
+			public void run() {
+				synchronized(resource1) {
+					
+					System.out.println("thread 1 lock the resource 1");
+					
+					try {
+						Thread.sleep(200);
+					}catch(Exception e ) {
+						e.printStackTrace();
+					}
+					synchronized(resource2) {
+						System.out.println("Thread 1 lock the resource 2");
+					}
+					
+	    		  }
+			}
+		};
+		// thread 2 tries lock on resource 2 then resource 1
+		Thread t2= new Thread("thread_2") {
+			@Override
+			public void run() {
+				
+				synchronized (resource2) {
+                 System.out.println("thread 2 lock the resource 2 ");
+                 
+                 try {
+                	 Thread.sleep(200);
+                 }catch (Exception e) {
+					e.printStackTrace();
+				}
+                 synchronized (resource1) {
+					System.out.println("thread 2 lock the resource 1 ");
+				}
+				}
+				
+			};
+		}
+		
+		
+
+	}
+
+}

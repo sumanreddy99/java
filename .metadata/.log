@@ -1,0 +1,1671 @@
+!SESSION 2020-05-14 11:52:32.646 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_241
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+This is a continuation of log file D:\javaprograms\.metadata\.bak_0.log
+Created Time: 2020-05-14 12:03:53.827
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2020-05-14 12:03:53.839
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-05-14 13:51:44.167
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-05-14 13:51:44.180
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@72326561[org.springframework.tooling.boot.ls:1.15.0.202001210741(id=1120)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-05-14 13:51:44.260
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-05-14 13:51:45.252
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+!SESSION 2020-06-28 11:54:33.718 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_251
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -data D:\javaprograms -product org.eclipse.epp.package.java.product
+
+!ENTRY org.springframework.ide.eclipse.batch 4 0 2020-06-28 11:58:51.165
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.batch [1176]
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.widgets
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.widgets; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+       org.springframework.ide.eclipse.config.ui [1191]
+         Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.wizard
+           -> Bundle-SymbolicName: org.springframework.ide.eclipse.wizard; bundle-version="3.9.12.202001201914-CI-B2372"; singleton:="true"
+              org.springframework.ide.eclipse.wizard [1207]
+                Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+                  -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.12.202001201914-CI-B2372"; singleton:="true"
+                     org.springframework.ide.eclipse.quickfix [1199]
+                       No resolution report for the bundle.  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.editors; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.hyperlinks
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.hyperlinks; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors.batch.graph
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.editors.batch.graph; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.xml.ws' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.web"]
+    import: (&(osgi.wiring.package=javax.xml.ws)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws
+  javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"]
+	at org.eclipse.osgi.container.Module.start(Module.java:462)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1778)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.bestpractices 4 0 2020-06-28 11:58:51.352
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.bestpractices [1188]
+  Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+    -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.12.202001201914-CI-B2372"; singleton:="true"
+       org.springframework.ide.eclipse.quickfix [1199]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.xml.ws' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.web"]
+    import: (&(osgi.wiring.package=javax.xml.ws)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws
+  javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"]
+	at org.eclipse.osgi.container.Module.start(Module.java:462)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1778)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.config.ui 4 0 2020-06-28 11:58:51.579
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.config.ui [1191]
+  Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.wizard
+    -> Bundle-SymbolicName: org.springframework.ide.eclipse.wizard; bundle-version="3.9.12.202001201914-CI-B2372"; singleton:="true"
+       org.springframework.ide.eclipse.wizard [1207]
+         Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+           -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.12.202001201914-CI-B2372"; singleton:="true"
+              org.springframework.ide.eclipse.quickfix [1199]
+                No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.xml.ws' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.web"]
+    import: (&(osgi.wiring.package=javax.xml.ws)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws
+  javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"]
+	at org.eclipse.osgi.container.Module.start(Module.java:462)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1778)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.data.core 4 0 2020-06-28 11:58:51.669
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.data.core [1193]
+  Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+    -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.12.202001201914-CI-B2372"; singleton:="true"
+       org.springframework.ide.eclipse.quickfix [1199]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.xml.ws' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.web"]
+    import: (&(osgi.wiring.package=javax.xml.ws)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws
+  javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"]
+	at org.eclipse.osgi.container.Module.start(Module.java:462)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1778)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.quickfix 4 0 2020-06-28 11:58:51.816
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.quickfix [1199]
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.xml.ws' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.web"]
+    import: (&(osgi.wiring.package=javax.xml.ws)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws
+  javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"]
+	at org.eclipse.osgi.container.Module.start(Module.java:462)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1778)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.webflow.ui 4 0 2020-06-28 11:58:52.029
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.webflow.ui [1204]
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow
+    -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+       org.springframework.ide.eclipse.webflow.ui.editor [1205]
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.editors; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+              org.springframework.ide.eclipse.config.ui [1191]
+                Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.wizard
+                  -> Bundle-SymbolicName: org.springframework.ide.eclipse.wizard; bundle-version="3.9.12.202001201914-CI-B2372"; singleton:="true"
+                     org.springframework.ide.eclipse.wizard [1207]
+                       Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+                         -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.12.202001201914-CI-B2372"; singleton:="true"
+                            org.springframework.ide.eclipse.quickfix [1199]
+                              No resolution report for the bundle.         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.widgets
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.widgets; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors.webflow.graph
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.editors.webflow.graph; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.hyperlinks
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.hyperlinks; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.editors; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor
+    -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.graph
+    -> Export-Package: org.springframework.ide.eclipse.webflow.ui.graph; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.graph"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+       org.springframework.ide.eclipse.webflow.ui.graph [1206]
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor
+           -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow
+           -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.xml.ws' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.web"]
+    import: (&(osgi.wiring.package=javax.xml.ws)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws
+  javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"]
+	at org.eclipse.osgi.container.Module.start(Module.java:462)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1778)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.webflow.ui.editor 4 0 2020-06-28 11:58:52.117
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.webflow.ui.editor [1205]
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.editors; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+       org.springframework.ide.eclipse.config.ui [1191]
+         Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.wizard
+           -> Bundle-SymbolicName: org.springframework.ide.eclipse.wizard; bundle-version="3.9.12.202001201914-CI-B2372"; singleton:="true"
+              org.springframework.ide.eclipse.wizard [1207]
+                Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+                  -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.12.202001201914-CI-B2372"; singleton:="true"
+                     org.springframework.ide.eclipse.quickfix [1199]
+                       No resolution report for the bundle.  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.widgets
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.widgets; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors.webflow.graph
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.editors.webflow.graph; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.hyperlinks
+    -> Export-Package: org.springframework.ide.eclipse.config.ui.hyperlinks; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.xml.ws' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.web"]
+    import: (&(osgi.wiring.package=javax.xml.ws)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws
+  javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"]
+	at org.eclipse.osgi.container.Module.start(Module.java:462)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1778)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.webflow.ui.graph 4 0 2020-06-28 11:58:52.154
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.webflow.ui.graph [1206]
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor
+    -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+       org.springframework.ide.eclipse.webflow.ui.editor [1205]
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.editors; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+              org.springframework.ide.eclipse.config.ui [1191]
+                Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.wizard
+                  -> Bundle-SymbolicName: org.springframework.ide.eclipse.wizard; bundle-version="3.9.12.202001201914-CI-B2372"; singleton:="true"
+                     org.springframework.ide.eclipse.wizard [1207]
+                       Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+                         -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.12.202001201914-CI-B2372"; singleton:="true"
+                            org.springframework.ide.eclipse.quickfix [1199]
+                              No resolution report for the bundle.         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.widgets
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.widgets; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.editors.webflow.graph
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.editors.webflow.graph; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+         Unresolved requirement: Import-Package: org.springframework.ide.eclipse.config.ui.hyperlinks
+           -> Export-Package: org.springframework.ide.eclipse.config.ui.hyperlinks; bundle-symbolic-name="org.springframework.ide.eclipse.config.ui"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+  Unresolved requirement: Import-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow
+    -> Export-Package: org.springframework.ide.eclipse.webflow.ui.editor.outline.webflow; bundle-symbolic-name="org.springframework.ide.eclipse.webflow.ui.editor"; bundle-version="3.9.12.202001201914-CI-B2372"; version="0.0.0"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.xml.ws' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.web"]
+    import: (&(osgi.wiring.package=javax.xml.ws)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws
+  javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"]
+	at org.eclipse.osgi.container.Module.start(Module.java:462)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1778)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.springframework.ide.eclipse.wizard 4 0 2020-06-28 11:58:52.170
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.wizard [1207]
+  Unresolved requirement: Require-Bundle: org.springframework.ide.eclipse.quickfix
+    -> Bundle-SymbolicName: org.springframework.ide.eclipse.quickfix; bundle-version="3.9.12.202001201914-CI-B2372"; singleton:="true"
+       org.springframework.ide.eclipse.quickfix [1199]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"] because it is exposed to package 'javax.xml.ws' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.100.v20191114-1701"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.quickfix [osgi.identity; type="osgi.bundle"; version:Version="3.9.12.202001201914-CI-B2372"; osgi.identity="org.springframework.ide.eclipse.quickfix"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.23.20190313-CI"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; type="osgi.bundle"; version:Version="4.3.23.20190313-CI"; osgi.identity="org.springframework.web"]
+    import: (&(osgi.wiring.package=javax.xml.ws)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws
+  javax.xml.ws [osgi.identity; type="osgi.bundle"; version:Version="2.1.0.v200902101523"; osgi.identity="javax.xml.ws"]
+	at org.eclipse.osgi.container.Module.start(Module.java:462)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1778)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jface 2 0 2020-06-28 11:59:34.303
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-06-28 11:59:34.303
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6c80b1d2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@30eed725,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.core.runtime 4 0 2020-06-28 12:00:33.647
+!MESSAGE Invalid input url:platform:/plugin/org.springframework.ide.eclipse.config.ui/icons/bean-config.png
+!STACK 0
+java.io.IOException: Unable to resolve plug-in "org.springframework.ide.eclipse.config.ui".
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.parse(PlatformURLPluginConnection.java:64)
+	at org.eclipse.core.internal.runtime.FindSupport.find(FindSupport.java:293)
+	at org.eclipse.core.runtime.FileLocator.find(FileLocator.java:206)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:228)
+	at org.eclipse.jface.resource.URLImageDescriptor.access$2(URLImageDescriptor.java:220)
+	at org.eclipse.jface.resource.URLImageDescriptor$URLImageFileNameProvider.getImagePath(URLImageDescriptor.java:57)
+	at org.eclipse.swt.internal.DPIUtil.validateAndGetImagePathAtZoom(DPIUtil.java:419)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:687)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:263)
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:181)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:55)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.ResourceManager.createImageWithDefault(ResourceManager.java:195)
+	at org.eclipse.jface.resource.ImageRegistry.get(ImageRegistry.java:206)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImageFromURI(SWTPartRenderer.java:220)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImage(SWTPartRenderer.java:230)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.createTab(StackRenderer.java:880)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.processContents(LazyStackRenderer.java:145)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:547)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:531)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:51)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:82)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:105)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:64)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:680)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:665)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1086)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:660)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.jface 4 0 2020-06-28 12:00:33.674
+!MESSAGE Unable to resolve plug-in "org.springframework.ide.eclipse.config.ui".
+!STACK 0
+java.io.IOException: Unable to resolve plug-in "org.springframework.ide.eclipse.config.ui".
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.parse(PlatformURLPluginConnection.java:64)
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.resolve(PlatformURLPluginConnection.java:73)
+	at org.eclipse.core.internal.boot.PlatformURLHandler.openConnection(PlatformURLHandler.java:69)
+	at org.eclipse.osgi.internal.url.URLStreamHandlerProxy.openConnection(URLStreamHandlerProxy.java:123)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:34)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:261)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:232)
+	at org.eclipse.jface.resource.URLImageDescriptor.access$2(URLImageDescriptor.java:220)
+	at org.eclipse.jface.resource.URLImageDescriptor$URLImageFileNameProvider.getImagePath(URLImageDescriptor.java:57)
+	at org.eclipse.swt.internal.DPIUtil.validateAndGetImagePathAtZoom(DPIUtil.java:419)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:687)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:263)
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:181)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:55)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.ResourceManager.createImageWithDefault(ResourceManager.java:195)
+	at org.eclipse.jface.resource.ImageRegistry.get(ImageRegistry.java:206)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImageFromURI(SWTPartRenderer.java:220)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImage(SWTPartRenderer.java:230)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.createTab(StackRenderer.java:880)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.processContents(LazyStackRenderer.java:145)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:547)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:531)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:51)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:82)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:105)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:64)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:680)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:665)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1086)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:660)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.core.runtime 4 0 2020-06-28 12:00:33.697
+!MESSAGE Invalid input url:platform:/plugin/org.springframework.ide.eclipse.config.ui/icons/bean-config.png
+!STACK 0
+java.io.IOException: Unable to resolve plug-in "org.springframework.ide.eclipse.config.ui".
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.parse(PlatformURLPluginConnection.java:64)
+	at org.eclipse.core.internal.runtime.FindSupport.find(FindSupport.java:293)
+	at org.eclipse.core.runtime.FileLocator.find(FileLocator.java:206)
+	at org.eclipse.jface.resource.URLImageDescriptor.getStream(URLImageDescriptor.java:155)
+	at org.eclipse.jface.resource.URLImageDescriptor.getImageData(URLImageDescriptor.java:123)
+	at org.eclipse.jface.resource.URLImageDescriptor.access$3(URLImageDescriptor.java:121)
+	at org.eclipse.jface.resource.URLImageDescriptor$URLImageDataProvider.getImageData(URLImageDescriptor.java:77)
+	at org.eclipse.swt.internal.DPIUtil.validateAndGetImageDataAtZoom(DPIUtil.java:404)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:732)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:271)
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:181)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:55)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.ResourceManager.createImageWithDefault(ResourceManager.java:195)
+	at org.eclipse.jface.resource.ImageRegistry.get(ImageRegistry.java:206)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImageFromURI(SWTPartRenderer.java:220)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImage(SWTPartRenderer.java:230)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.createTab(StackRenderer.java:880)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.processContents(LazyStackRenderer.java:145)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:547)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:531)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:51)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:82)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:105)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:64)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:680)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:665)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1086)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:660)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.jface 2 0 2020-06-28 12:00:33.715
+!MESSAGE The image could not be loaded: URLImageDescriptor(platform:/plugin/org.springframework.ide.eclipse.config.ui/icons/bean-config.png)
+!STACK 0
+org.eclipse.jface.resource.DeviceResourceException: Unable to create resource URLImageDescriptor(platform:/plugin/org.springframework.ide.eclipse.config.ui/icons/bean-config.png)
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:183)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:55)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.ResourceManager.createImageWithDefault(ResourceManager.java:195)
+	at org.eclipse.jface.resource.ImageRegistry.get(ImageRegistry.java:206)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImageFromURI(SWTPartRenderer.java:220)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImage(SWTPartRenderer.java:230)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.createTab(StackRenderer.java:880)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.processContents(LazyStackRenderer.java:145)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:547)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:531)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:51)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:82)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:105)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:64)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:680)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:140)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:665)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1086)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:660)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:01:32.343
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:01:32.358
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@192da968[org.springframework.tooling.boot.ls:1.15.0.202001210741(id=1120)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:01:32.452
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:01:33.410
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-06-28 12:02:04.354
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\pradeep'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:02:31.705
+!MESSAGE Boot LS startup time from start to initialized: 59031ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:02:32.677
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.CWkcUXKgisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:03.133
+!MESSAGE subscribing to classpath changes: sts4.classpath.CWkcUXKg isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:03.236
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:03.345
+!MESSAGE subsribers = {sts4.classpath.CWkcUXKg=Send Classpath Notifications(188)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:03.373
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:03.465
+!MESSAGE project HelloSpringMVC ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:03.535
+!MESSAGE Preparing classpath changed notification HelloSpringMVC
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:03.695
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:03.742
+!MESSAGE project Array_Inject ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:04.042
+!MESSAGE project Autowiring-Annotation ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:04.234
+!MESSAGE classpath=34 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:04.431
+!MESSAGE project Autowiring-XMLApproach ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:04.465
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg HelloSpringMVC false 34
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:04.569
+!MESSAGE project DependsOn ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:04.846
+!MESSAGE Preparing classpath changed notification Array_Inject
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:04.950
+!MESSAGE project FactoryClassUsingFactoryBean ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:04.974
+!MESSAGE project FactoryClassUsingInstanceMethod ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:05.159
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:05.181
+!MESSAGE classpath=29 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:05.199
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg Array_Inject false 29
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:05.213
+!MESSAGE project FactoryClassUsingStaticMethod ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:05.228
+!MESSAGE Preparing classpath changed notification Autowiring-Annotation
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:05.241
+!MESSAGE project Hello ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:05.256
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:05.269
+!MESSAGE project Hibernat_Project ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:05.282
+!MESSAGE classpath=28 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:05.300
+!MESSAGE project Hibernate ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:05.545
+!MESSAGE project Hibernate SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:05.988
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg Autowiring-Annotation false 28
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:06.005
+!MESSAGE Preparing classpath changed notification Autowiring-XMLApproach
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:06.439
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:06.709
+!MESSAGE project InjectAnnotation ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:07.241
+!MESSAGE project J2EE_Named_Annotations ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:08.040
+!MESSAGE classpath=28 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:08.997
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg Autowiring-XMLApproach false 28
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:09.411
+!MESSAGE project LookUpDependencyInjection ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:10.008
+!MESSAGE Preparing classpath changed notification DependsOn
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:10.311
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:10.566
+!MESSAGE project MethodReplacer ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:10.589
+!MESSAGE project PracticePrograms ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:10.720
+!MESSAGE classpath=29 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:10.951
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg DependsOn false 29
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:11.155
+!MESSAGE project PropertiesFile_DI ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:11.247
+!MESSAGE project PropertiesInjection ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:11.388
+!MESSAGE Preparing classpath changed notification FactoryClassUsingFactoryBean
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:11.403
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:11.431
+!MESSAGE classpath=28 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:11.714
+!MESSAGE project PropertyandConstructorNS ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:11.738
+!MESSAGE project RemoteSystemsTempFiles ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:11.904
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg FactoryClassUsingFactoryBean false 28
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:11.920
+!MESSAGE Preparing classpath changed notification FactoryClassUsingInstanceMethod
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.164
+!MESSAGE project RemoteSystemsTempFiles SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.189
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.295
+!MESSAGE project RequiredAnnotation ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.311
+!MESSAGE project ResourceAnnotation ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.353
+!MESSAGE classpath=28 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.430
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg FactoryClassUsingInstanceMethod false 28
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.452
+!MESSAGE Preparing classpath changed notification FactoryClassUsingStaticMethod
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.537
+!MESSAGE project Servers ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.621
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.642
+!MESSAGE project Servers SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.759
+!MESSAGE project Servers2 ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.833
+!MESSAGE classpath=28 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.918
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg FactoryClassUsingStaticMethod false 28
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.949
+!MESSAGE project Servers2 SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.963
+!MESSAGE project SetterDIMandatory ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:12.982
+!MESSAGE project Singleton-Dependency ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.009
+!MESSAGE Preparing classpath changed notification Hello
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.025
+!MESSAGE project Spring-Bean-LifeCycle ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.040
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.226
+!MESSAGE project Spring-Bean-LifeCycle SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.304
+!MESSAGE classpath=28 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.327
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg Hello false 28
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.394
+!MESSAGE project SpringLifeCycle-AnnotationApprocah ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.417
+!MESSAGE Preparing classpath changed notification Hibernat_Project
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.452
+!MESSAGE project SpringLifeCycle-Declarative(XML)Approcah ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.504
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.530
+!MESSAGE classpath=37 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.637
+!MESSAGE project SpringLifeCycle-ProgrammaticApprocah ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.652
+!MESSAGE project Spring_MVC_Home ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.666
+!MESSAGE project Spring_MVC_Home SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.800
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg Hibernat_Project false 37
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:13.935
+!MESSAGE Preparing classpath changed notification InjectAnnotation
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.084
+!MESSAGE project StaticVariable-Dependency ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.102
+!MESSAGE project StereoType_Annotations ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.120
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.141
+!MESSAGE project collectionInject ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.256
+!MESSAGE project i18n ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.328
+!MESSAGE classpath=29 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.348
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg InjectAnnotation false 29
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.388
+!MESSAGE Preparing classpath changed notification J2EE_Named_Annotations
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.557
+!MESSAGE project i18n SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.608
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.724
+!MESSAGE project java1.8 _Programs ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.812
+!MESSAGE classpath=29 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.828
+!MESSAGE project jboss-springmvc-webapp ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.846
+!MESSAGE project jboss-springmvc-webapp SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.866
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg J2EE_Named_Annotations false 29
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.879
+!MESSAGE project spring-annotation ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.894
+!MESSAGE Preparing classpath changed notification LookUpDependencyInjection
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.907
+!MESSAGE project spring-annotation SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.919
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.933
+!MESSAGE project spring-ioc ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.946
+!MESSAGE classpath=33 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.958
+!MESSAGE project spring-lc ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.971
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg LookUpDependencyInjection false 33
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.984
+!MESSAGE project test ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:14.998
+!MESSAGE Preparing classpath changed notification MethodReplacer
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.011
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.023
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.036
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.CWkcUXKg => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.049
+!MESSAGE classpath=33 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.069
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg MethodReplacer false 33
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.085
+!MESSAGE Preparing classpath changed notification PracticePrograms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.106
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.122
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.138
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg PracticePrograms false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.154
+!MESSAGE Preparing classpath changed notification PropertiesFile_DI
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.168
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.191
+!MESSAGE classpath=29 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.209
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg PropertiesFile_DI false 29
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.223
+!MESSAGE Preparing classpath changed notification PropertiesInjection
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.238
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.259
+!MESSAGE classpath=29 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.277
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg PropertiesInjection false 29
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.323
+!MESSAGE Preparing classpath changed notification PropertyandConstructorNS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.356
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.430
+!MESSAGE classpath=28 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.491
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg PropertyandConstructorNS false 28
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.700
+!MESSAGE Preparing classpath changed notification RequiredAnnotation
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.827
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.848
+!MESSAGE classpath=29 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.933
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg RequiredAnnotation false 29
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.957
+!MESSAGE Preparing classpath changed notification ResourceAnnotation
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:15.977
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.043
+!MESSAGE classpath=28 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.086
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg ResourceAnnotation false 28
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.100
+!MESSAGE Preparing classpath changed notification SetterDIMandatory
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.138
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.161
+!MESSAGE classpath=29 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.181
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg SetterDIMandatory false 29
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.195
+!MESSAGE Preparing classpath changed notification Singleton-Dependency
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.210
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.228
+!MESSAGE classpath=28 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.246
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg Singleton-Dependency false 28
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.259
+!MESSAGE Preparing classpath changed notification SpringLifeCycle-AnnotationApprocah
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.274
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.293
+!MESSAGE classpath=29 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.310
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg SpringLifeCycle-AnnotationApprocah false 29
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.323
+!MESSAGE Preparing classpath changed notification SpringLifeCycle-Declarative(XML)Approcah
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.336
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.516
+!MESSAGE classpath=29 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.524
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg SpringLifeCycle-Declarative(XML)Approcah false 29
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.568
+!MESSAGE Preparing classpath changed notification SpringLifeCycle-ProgrammaticApprocah
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.583
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.603
+!MESSAGE classpath=29 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.624
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg SpringLifeCycle-ProgrammaticApprocah false 29
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.657
+!MESSAGE Preparing classpath changed notification StaticVariable-Dependency
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.675
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.696
+!MESSAGE classpath=28 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.716
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg StaticVariable-Dependency false 28
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.732
+!MESSAGE Preparing classpath changed notification StereoType_Annotations
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.749
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.899
+!MESSAGE classpath=28 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.918
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg StereoType_Annotations false 28
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.928
+!MESSAGE Preparing classpath changed notification collectionInject
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.940
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.952
+!MESSAGE classpath=29 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:16.971
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg collectionInject false 29
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.132
+!MESSAGE Preparing classpath changed notification java1.8 _Programs
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.147
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.160
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.257
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg java1.8 _Programs false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.306
+!MESSAGE Preparing classpath changed notification spring-ioc
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.325
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.376
+!MESSAGE classpath=82 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.442
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg spring-ioc false 82
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.456
+!MESSAGE Preparing classpath changed notification spring-lc
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.822
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.832
+!MESSAGE classpath=56 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.845
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg spring-lc false 56
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.858
+!MESSAGE Preparing classpath changed notification test
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.871
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.892
+!MESSAGE classpath=29 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.910
+!MESSAGE buffering callback sts4.classpath.CWkcUXKg test false 29
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:17.922
+!MESSAGE executing callback sts4.classpath.CWkcUXKg 32 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-28 12:03:20.009
+!MESSAGE executing callback sts4.classpath.CWkcUXKg FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2020-06-28 12:03:20.024
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:197)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:168)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 1 2020-06-28 12:04:40.221
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/RequiredAnnotation/target/classes/com/ioc/di/Requiredannotation/pojo/Car.class)[369]: java.lang.Exception: Resource '/RequiredAnnotation/target/classes/com/ioc/di/Requiredannotation/pojo/Car.class' is not local.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkLocal(Resource.java:342)
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:254)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:104)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:56)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:103)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:55)
+	at org.eclipse.core.internal.expressions.AndExpression.evaluate(AndExpression.java:34)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:69)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:25)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:55)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:58)
+	at org.eclipse.ui.internal.navigator.NavigatorPlugin$Evaluator.run(NavigatorPlugin.java:251)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.navigator.NavigatorPlugin.safeEvaluate(NavigatorPlugin.java:266)
+	at org.eclipse.ui.internal.navigator.extensions.NavigatorContentDescriptor.isPossibleChild(NavigatorContentDescriptor.java:448)
+	at org.eclipse.ui.internal.navigator.extensions.NavigatorContentDescriptorManager.findDescriptors(NavigatorContentDescriptorManager.java:176)
+	at org.eclipse.ui.internal.navigator.extensions.NavigatorContentDescriptorManager.findDescriptorsForPossibleChild(NavigatorContentDescriptorManager.java:149)
+	at org.eclipse.ui.internal.navigator.NavigatorContentService.findDescriptorsWithPossibleChild(NavigatorContentService.java:810)
+	at org.eclipse.ui.internal.navigator.NavigatorContentService.findOverrideableContentExtensionsForPossibleChild(NavigatorContentService.java:555)
+	at org.eclipse.ui.internal.navigator.NavigatorPipelineService.interceptRemove(NavigatorPipelineService.java:116)
+	at org.eclipse.ui.navigator.CommonViewer.remove(CommonViewer.java:324)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.remove(AbstractTreeViewer.java:2285)
+	at org.eclipse.wst.jsdt.internal.ui.packageview.PackageExplorerContentProvider$6.run(PackageExplorerContentProvider.java:1503)
+	at org.eclipse.wst.jsdt.internal.ui.packageview.PackageExplorerContentProvider.runUpdates(PackageExplorerContentProvider.java:198)
+	at org.eclipse.wst.jsdt.internal.ui.packageview.PackageExplorerContentProvider.runPendingUpdates(PackageExplorerContentProvider.java:190)
+	at org.eclipse.wst.jsdt.internal.ui.packageview.PackageExplorerContentProvider$1.runInUIThread(PackageExplorerContentProvider.java:168)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3590)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:394)
+	at org.eclipse.jface.dialogs.MessageDialog.openWarning(MessageDialog.java:515)
+	at org.springframework.tooling.boot.ls.MissingJdkWarning.show(MissingJdkWarning.java:50)
+	at org.springframework.tooling.boot.ls.MissingJdkWarning.lambda$0(MissingJdkWarning.java:30)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3590)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:660)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+!SUBENTRY 1 org.eclipse.core.resources 4 369 2020-06-28 12:04:40.223
+!MESSAGE Resource '/RequiredAnnotation/target/classes/com/ioc/di/Requiredannotation/pojo/Car.class' is not local.
+!STACK 0
+java.lang.Exception: Resource '/RequiredAnnotation/target/classes/com/ioc/di/Requiredannotation/pojo/Car.class' is not local.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkLocal(Resource.java:342)
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:254)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:104)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:56)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:103)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:55)
+	at org.eclipse.core.internal.expressions.AndExpression.evaluate(AndExpression.java:34)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:69)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:25)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:55)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:58)
+	at org.eclipse.ui.internal.navigator.NavigatorPlugin$Evaluator.run(NavigatorPlugin.java:251)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.navigator.NavigatorPlugin.safeEvaluate(NavigatorPlugin.java:266)
+	at org.eclipse.ui.internal.navigator.extensions.NavigatorContentDescriptor.isPossibleChild(NavigatorContentDescriptor.java:448)
+	at org.eclipse.ui.internal.navigator.extensions.NavigatorContentDescriptorManager.findDescriptors(NavigatorContentDescriptorManager.java:176)
+	at org.eclipse.ui.internal.navigator.extensions.NavigatorContentDescriptorManager.findDescriptorsForPossibleChild(NavigatorContentDescriptorManager.java:149)
+	at org.eclipse.ui.internal.navigator.NavigatorContentService.findDescriptorsWithPossibleChild(NavigatorContentService.java:810)
+	at org.eclipse.ui.internal.navigator.NavigatorContentService.findOverrideableContentExtensionsForPossibleChild(NavigatorContentService.java:555)
+	at org.eclipse.ui.internal.navigator.NavigatorPipelineService.interceptRemove(NavigatorPipelineService.java:116)
+	at org.eclipse.ui.navigator.CommonViewer.remove(CommonViewer.java:324)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.remove(AbstractTreeViewer.java:2285)
+	at org.eclipse.wst.jsdt.internal.ui.packageview.PackageExplorerContentProvider$6.run(PackageExplorerContentProvider.java:1503)
+	at org.eclipse.wst.jsdt.internal.ui.packageview.PackageExplorerContentProvider.runUpdates(PackageExplorerContentProvider.java:198)
+	at org.eclipse.wst.jsdt.internal.ui.packageview.PackageExplorerContentProvider.runPendingUpdates(PackageExplorerContentProvider.java:190)
+	at org.eclipse.wst.jsdt.internal.ui.packageview.PackageExplorerContentProvider$1.runInUIThread(PackageExplorerContentProvider.java:168)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3590)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:394)
+	at org.eclipse.jface.dialogs.MessageDialog.openWarning(MessageDialog.java:515)
+	at org.springframework.tooling.boot.ls.MissingJdkWarning.show(MissingJdkWarning.java:50)
+	at org.springframework.tooling.boot.ls.MissingJdkWarning.lambda$0(MissingJdkWarning.java:30)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3590)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:660)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)

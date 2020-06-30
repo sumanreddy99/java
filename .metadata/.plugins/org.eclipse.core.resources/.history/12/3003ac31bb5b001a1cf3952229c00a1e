@@ -1,0 +1,18 @@
+package com.java;
+
+public class AggregationTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Address address=new Address("79", "Rajeev", "CM", "Perungudi");
+		
+		System.out.println("address"+address.toString());
+		
+		Employee employee=new Employee(551, "suman", "suman@live.com", address);
+		
+		
+		
+		
+	}
+
+}

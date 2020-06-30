@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.password">password</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hibernate</property>
+
+
+		<!-- SQL Dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+       <property name="connection.pool.size">1</property>
+       
+       
+  <!--     <property name="hibernate.cache.use_second_level_cache">true</property>
+ <property name="hibernate.cache.region.factory_class">
+org.hibernate.cache.internal.EhCacheRegionFactory
+</property> -->
+       <property name="cache.user_second_level_cache">true</property>
+       <property name="cache.query_cache"></property>
+        <property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+      <!--   <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+      -->
+       <!--Display all executed SQL to Console -->
+		<property name="show_sql">true</property>
+		<!-- drop and re-create database schema on start up -->
+		 <property name="hibernate.hbm2ddl.auto">create</property> 
+		
+        <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+		
+		<!-- Names the annotated entity class -->
+		<!-- <mapping class="com.hibernate.dto.Student"></mapping>
+		<mapping class="com.hibernate.dto.School"></mapping> -->
+		<!-- <mapping class="com.hibernate.dto.UserDetails"></mapping>
+		<mapping class="com.hibernate.dto.Vechile"></mapping>
+		<mapping class="com.hibernate.dto.TwoWheeler"></mapping>
+		<mapping class="com.hibernate.dto.FourWheeler"></mapping>-->
+	   <mapping class="com.hibernate.dto.CRUD_UserDetails"></mapping>
+		<!-- <mapping class="com.hibernate.dto.Persistent_To_Detached_UserDetails"></mapping>
+		 -->
+		
+		
+	</session-factory>
+</hibernate-configuration>

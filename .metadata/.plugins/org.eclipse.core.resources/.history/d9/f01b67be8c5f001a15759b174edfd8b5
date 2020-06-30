@@ -1,0 +1,34 @@
+package com.java;
+
+import java.util.Scanner;
+
+public class RecursionTestUsingFactorial {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the factorail of given number");
+		
+		int num=scanner.nextInt();
+		int n=printFactorial(num);
+		System.out.println(n);
+		
+		
+	}
+
+	private static int printFactorial(int num) {
+		// TODO Auto-generated method stub
+		
+		if(num==0 || num==1) {
+			return 1;
+		}else {
+			
+			System.out.println(num*printFactorial(num-1));
+		return num*printFactorial(num-1);
+	
+		
+		}
+	}
+
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+		  
+
+
+
+<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+	
+	<property name="staticMethod" value="com.ioc.di.StaticMethodUsingFactoryClass.client.CarFactory.setCarName"/>
+	
+	<property name="arguments">
+	<list>
+	<value>com.ioc.di.StaticMethodUsingFactoryClass.bean.Audi</value>
+	</list>
+	
+	</property>
+	</bean>
+	<bean id="cf" class="com.ioc.di.StaticMethodUsingFactoryClass.client.CarFactory" factory-method="getCarFactory"/>
+	
+
+
+ 
+<!--  <bean id="cf" class="com.ioc.di.StaticMethodUsingFactoryClass.client.CarFactory" >
+ <property name="carName">
+ <list>
+	<value>Audi</value>
+	</list>
+ </bean>
+ <bean id="c" factory-method="getCarFactory" factory-bean="cf"/>
+
+
+ -->
+		</beans>

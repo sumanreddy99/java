@@ -1,0 +1,27 @@
+package com.java;
+
+public class DeadLockDetect_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		final String resource1="java";
+		final String resource2="tutorial";
+		
+		// Thread t1 tries to lock the resource1 then resource2 
+		Thread t1=new Thread("thread_1") {
+			@Override
+			public void run() {
+				synchronized(resource1) {
+			}
+			
+				
+			}
+		};
+		
+		
+		
+
+	}
+
+}

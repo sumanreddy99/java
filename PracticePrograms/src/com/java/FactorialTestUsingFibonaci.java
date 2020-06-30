@@ -1,0 +1,32 @@
+package com.java;
+
+import java.util.Scanner;
+
+public class FactorialTestUsingFibonaci {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner  scanner=new Scanner(System.in);
+		System.out.println("enter the fibonaci number");
+		int num=scanner.nextInt();
+		
+		for(int i=0;i<num;i++) {
+			int n=printfibonaci(i);
+			System.out.print(" "+n);
+		}
+		
+	}
+
+	private static int printfibonaci(int i) {
+		// TODO Auto-generated method stub
+		
+		if(i<=1) {
+			return i;
+		}else {
+  			return printfibonaci(i-1)+printfibonaci(i-2);
+		}
+		
+	}
+
+}

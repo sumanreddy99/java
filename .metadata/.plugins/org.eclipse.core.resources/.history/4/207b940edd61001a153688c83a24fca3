@@ -1,0 +1,16 @@
+package com.java;
+
+import java.util.*;
+
+
+public class AddelementToCollection {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		List<Integer> al=new ArrayList<Integer>();
+		
+
+	}
+
+}

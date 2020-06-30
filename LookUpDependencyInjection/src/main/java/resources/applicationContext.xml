@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+<!-- lookup dependency injection  through interface  -->	
+
+<bean id="c" class="com.ioc.di.lookupDI.bean.Car">
+<lookup-method name="myCarEngine" bean="e"/>
+</bean>
+
+<bean  id="e" class="com.ioc.di.lookupDI.bean.Engine">
+<property name="name" value="Audi"/>
+</bean>
+
+<bean id="b" class="com.ioc.di.lookupDI.bean.Bus">
+
+<lookup-method name="mybusEngine"  bean="e1"/>
+</bean>
+
+<bean  id="e1" class="com.ioc.di.lookupDI.bean.Engine">
+<property name="name" value="TATABus"/>
+</bean>
+
+<bean id="t" class="com.ioc.di.lookupDI.bean.Truck">
+<lookup-method name="myTruckEngine" bean="e2"/>
+</bean>
+
+<bean  id="e2" class="com.ioc.di.lookupDI.bean.Engine">
+<property name="name" value="BenzTruck"/>
+</bean>
+
+
+
+	
+ 	</beans>

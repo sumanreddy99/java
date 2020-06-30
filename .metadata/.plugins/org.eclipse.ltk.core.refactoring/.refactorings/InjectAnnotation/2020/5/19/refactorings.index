@@ -1,0 +1,7 @@
+1588521517613	Rename package 'com.ioc.di.singleDI.bean'
+1588521544327	Rename package 'com.ioc.di.singleDI.client'
+1588523161308	Rename package 'com.ioc.di.resourceannotation.bean'
+1588523186816	Rename package 'com.ioc.di.resourceannotation.client'
+1588523668380	Delete element
+1588523685077	Rename package 'com.ioc.di.PropertyandConstructorNS'
+1588526511913	Rename type 'ResourceClient'
